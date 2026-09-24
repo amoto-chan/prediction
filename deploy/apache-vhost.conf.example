@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName predictor.example.edu.ph
+    DocumentRoot /srv/prediction/public
+
+    <Directory /srv/prediction/public>
+        AllowOverride All
+        Options -Indexes +FollowSymLinks
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/predictor-error.log
+    CustomLog ${APACHE_LOG_DIR}/predictor-access.log combined
+</VirtualHost>
+
